@@ -1,0 +1,215 @@
+/* GOOGLE FONT */
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --sidbar-width: 5rem;
+    --font-base: 'Be Vietnam Pro', serif;
+    /* --font-base: 'Spectral', serif; */
+}
+
+/* TEXT */
+body {
+    background-color: black;
+    color: white;
+    font-family: var(--font-base);
+    font-weight: 200;
+    line-height: 1.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 100;
+}
+
+h2 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 0.5rem;
+    font-weight: 700;
+    color: grey;
+}
+
+/* LINK */
+a {
+    text-decoration: none;
+}
+
+.link-custom {
+    position: relative;
+    color: white;
+    /* display: inline-block; */
+}
+
+.link-custom:hover {
+    color: white;
+}
+
+.link-custom::after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: grey;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    transition: all 0.45s;
+}
+
+.link-custom:hover::after {
+    width: 0%;
+}
+
+/* IMAGE */
+img {
+    /* width: 100%; */
+    border-radius: 1px;
+    pointer-events: none;
+    padding: 1rem 0;
+}
+
+/* NAVBAR */
+.row-navbar {
+    display: flex;
+    align-items: flex-start;
+    row-gap: 3rem;
+    padding: 0.5rem 0;
+}
+
+/* NAVBAR-NAVIGATION */
+.navbar-navigation {
+    background-color: black;
+    border-bottom: 1px solid grey;
+}
+
+.navbar-navigation .nav-link {
+    color: white;
+    position: relative;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+@media (min-width: 576px) {
+
+    /* BIG SCREEN */
+    .navbar-navigation {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: black;
+        background-size: cover;
+        background-position: center;
+        border-right: 1px solid grey;
+        border-bottom: none;
+    }
+
+    .navbar-navigation .nav-link::after {
+        content: "";
+        width: 1px;
+        height: 1px;
+        background-color: white;
+        position: absolute;
+        left: -2px;
+        top: 50%;
+        transition: all 0.45s;
+    }
+
+    .navbar-navigation .nav-link:hover::after {
+        color: grey;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+    }
+
+    /* CONTENT WRAPPER */
+    #content-wrapper {
+        padding-left: var(--sidbar-width);
+        padding-right: var(--sidbar-width);
+        justify-content: center;
+    }
+}
+
+/* NAVBAR-CONTACT */
+.navbar-contact {
+    background-color: black;
+    border-top: 1px solid grey;
+}
+
+.navbar-contact .nav-link {
+    color: white;
+    position: relative;
+    font-size: 2rem;
+}
+
+@media (min-width: 576px) {
+
+    /* BIG SCREEN */
+    .navbar-contact {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: black;
+        background-size: cover;
+        background-position: center;
+        border-left: 1px solid grey;
+        border-top: none;
+        left: 100% - var(--sidbar-width);
+    }
+
+    .navbar-contact .nav-link::after {
+        content: "";
+        width: 1px;
+        height: 1px;
+        background-color: white;
+        position: absolute;
+        right: -1px;
+        top: 50%;
+        transition: all 0.45s;
+    }
+
+    .navbar-contact .nav-link:hover::after {
+        color: white;
+        width: 1px;
+        height: 100%;
+        top: 0;
+        bottom: 0;
+    }
+
+    /* CONTENT WRAPPER */
+    #content-wrapper {
+        padding-left: var(--sidbar-width);
+        padding-right: var(--sidbar-width);
+        justify-content: center;
+    }
+}
+
+/* SECTION */
+.full-height {
+    min-height: 90vh;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    border-bottom: 1px solid grey;
+}
+
+.row-work {
+    display: flex;
+    align-items: flex-start;
+    /* row-gap: 2.5rem; */
+    /* padding-top: 1rem; */
+    padding-bottom: 4rem;
+}
+
+/* CAROUSEL */
+.carousel-inner {
+    transform: scale(0.8, 0.8);
+}
+
+/* FOOTER */
+.copyright {
+    font-size: 0.75rem;
+    color: grey;
+}
