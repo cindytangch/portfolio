@@ -4,7 +4,6 @@
 :root {
     --sidbar-width: 5rem;
     --font-base: 'Be Vietnam Pro', serif;
-    /* --font-base: 'Spectral', serif; */
 }
 
 /* TEXT */
@@ -14,6 +13,7 @@ body {
     font-family: var(--font-base);
     font-weight: 200;
     line-height: 1.5rem;
+    overflow-x: hidden; /* to prevent horizontal scrolling */
 }
 
 h1 {
@@ -40,7 +40,6 @@ a {
 .link-custom {
     position: relative;
     color: white;
-    /* display: inline-block; */
 }
 
 .link-custom:hover {
@@ -64,7 +63,6 @@ a {
 
 /* IMAGE */
 img {
-    /* width: 100%; */
     border-radius: 1px;
     pointer-events: none;
     padding: 1rem 0;
@@ -198,8 +196,6 @@ img {
 .row-work {
     display: flex;
     align-items: flex-start;
-    /* row-gap: 2.5rem; */
-    /* padding-top: 1rem; */
     padding-bottom: 4rem;
 }
 
